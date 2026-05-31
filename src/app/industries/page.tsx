@@ -203,7 +203,7 @@ export default function IndustriesPage() {
                   </CardContent>
                 </Card>
 
-                <Link href="/contact">
+                <Link href={`/industries/${industry.id}`}>
                   <Button size="lg" className="font-semibold group">
                     Learn more
                     <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
