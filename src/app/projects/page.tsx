@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 /* -------------------------------------------------------------------------- */
 
 interface Project {
+  slug: string;
   image: string;
   title: string;
   client: string;
@@ -41,6 +42,7 @@ interface Project {
 
 const projects: Project[] = [
   {
+    slug: "full-warehouse-automation",
     image: "/images/project-01.jpg",
     title: "Full Warehouse Automation",
     client: "Global Logistics Inc.",
@@ -56,6 +58,7 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "smart-robotics-integration",
     image: "/images/project-02.jpg",
     title: "Smart Robotics Integration",
     client: "Future-Proof Manufacturing",
@@ -71,6 +74,7 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "ai-powered-sorting-system",
     image: "/images/project-03.jpg",
     title: "AI-Powered Sorting System",
     client: "Innovate Distribution",
@@ -86,6 +90,7 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "end-to-end-digital-twin",
     image: "/images/project-04.jpg",
     title: "End-to-End Digital Twin",
     client: "Prime Fulfillment Corp.",
@@ -101,6 +106,7 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "predictive-inventory-ai",
     image: "/images/project-05.jpg",
     title: "Predictive Inventory AI",
     client: "Nexus Supply Chain",
@@ -116,6 +122,7 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "autonomous-vehicle-fleet",
     image: "/images/project-06.jpg",
     title: "Autonomous Vehicle Fleet",
     client: "Atlas Warehousing",
@@ -131,6 +138,7 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "cloud-wms-migration",
     image: "/images/project-07.jpg",
     title: "Cloud WMS Migration",
     client: "Vertex Logistics",
@@ -146,6 +154,7 @@ const projects: Project[] = [
     ],
   },
   {
+    slug: "multi-channel-fulfillment-hub",
     image: "/images/project-08.jpg",
     title: "Multi-Channel Fulfillment Hub",
     client: "Omega Retail DC",
@@ -259,7 +268,7 @@ export default function ProjectsPage() {
 
                   {/* CTA Link */}
                   <Link
-                    href="/contact"
+                    href={`/projects/${project.slug}`}
                     className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
                   >
                     View Case Study
