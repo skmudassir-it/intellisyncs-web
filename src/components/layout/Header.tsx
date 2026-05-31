@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -51,6 +52,7 @@ export default function Header() {
               Get in Touch
             </Button>
           </Link>
+          <ThemeToggle />
         </nav>
 
         <button
